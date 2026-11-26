@@ -38,16 +38,28 @@
       height: auto;
     }
 
-    /* BOTONES INVISIBLES SOBRE EL DISEÑO */
+    /* BOTONES DE LA PORTADA */
 
     .boton {
       position: absolute;
-      display: block;
-      height: 5.4%;
       top: 79.1%;
-      border-radius: 12px;
+      height: 5.4%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #a51d88;
+      color: white;
       text-decoration: none;
-      cursor: pointer;
+      border-radius: 12px;
+      font-size: clamp(10px, 1.5vw, 24px);
+      line-height: 1;
+      white-space: nowrap;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .boton:hover {
+      background: #cf32ad;
+      transform: translateY(-3px);
     }
 
     .boton-clases {
@@ -60,9 +72,29 @@
       width: 11.2%;
     }
 
-    .boton:focus-visible {
-      outline: 3px solid white;
-      outline-offset: 3px;
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      bottom: 22px;
+      right: 25px;
+      width: 65px;
+      height: 65px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      font-size: 35px;
+      box-shadow: 0 3px 12px #0006;
+      z-index: 100;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
     }
 
     /* SECCIONES */
@@ -100,30 +132,62 @@
       background: #170316;
     }
 
+    /* ADAPTACIÓN A CELULARES */
+
+    @media (max-width: 600px) {
+      .boton {
+        border-radius: 5px;
+        font-size: clamp(7px, 1.5vw, 11px);
+      }
+
+      .whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 27px;
+      }
+
+      section {
+        padding: 65px 7%;
+      }
+
+      section h2 {
+        font-size: 29px;
+      }
+
+      section p {
+        font-size: 16px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- PORTADA PRINCIPAL -->
-
   <main>
+
+    <!-- PORTADA -->
+
     <div class="portada">
 
       <img src="portada-can.png"
-           alt="Can Quiroga, cantante y docente de Canto, Piano y Teoría Musical">
+           alt="Can Quiroga - Canto, Piano y Teoría Musical">
 
       <a href="#clases"
-         class="boton boton-clases"
-         aria-label="Empezar clases"></a>
+         class="boton boton-clases">
+        Empezar Clases
+      </a>
 
       <a href="#contacto"
-         class="boton boton-contacto"
-         aria-label="Contactar"></a>
+         class="boton boton-contacto">
+        Contactar
+      </a>
 
     </div>
 
-    <!-- SECCIÓN CLASES -->
+    <!-- CLASES -->
 
     <section id="clases">
       <h2>Mis clases</h2>
@@ -136,7 +200,7 @@
       </p>
     </section>
 
-    <!-- SECCIÓN CONTACTO -->
+    <!-- CONTACTO -->
 
     <section id="contacto">
       <h2>¡Hablemos!</h2>
@@ -149,10 +213,19 @@
 
   </main>
 
+  <!-- WHATSAPP -->
+
+  <a class="whatsapp"
+     href="https://wa.me/54911XXXXXXXX"
+     target="_blank"
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    ☎
+  </a>
+
   <footer>
     © 2026 Can Quiroga | Canto · Piano · Teoría Musical
   </footer>
 
 </body>
 </html>
-
