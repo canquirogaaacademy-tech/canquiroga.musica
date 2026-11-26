@@ -1,1 +1,158 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Can Quiroga | Canto, Piano y Teoría</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #290522;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* PORTADA */
+
+    .portada {
+      position: relative;
+      width: 100%;
+      line-height: 0;
+    }
+
+    .portada img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* BOTONES INVISIBLES SOBRE EL DISEÑO */
+
+    .boton {
+      position: absolute;
+      display: block;
+      height: 5.4%;
+      top: 79.1%;
+      border-radius: 12px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .boton-clases {
+      left: 11.9%;
+      width: 13.4%;
+    }
+
+    .boton-contacto {
+      left: 28.5%;
+      width: 11.2%;
+    }
+
+    .boton:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 3px;
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 100px 8%;
+      text-align: center;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      font-size: 38px;
+      margin-bottom: 25px;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    #clases {
+      background: #390a36;
+    }
+
+    #contacto {
+      background: #21051f;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #d99acb;
+      background: #170316;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA PRINCIPAL -->
+
+  <main>
+    <div class="portada">
+
+      <img src="portada-can.png"
+           alt="Can Quiroga, cantante y docente de Canto, Piano y Teoría Musical">
+
+      <a href="#clases"
+         class="boton boton-clases"
+         aria-label="Empezar clases"></a>
+
+      <a href="#contacto"
+         class="boton boton-contacto"
+         aria-label="Contactar"></a>
+
+    </div>
+
+    <!-- SECCIÓN CLASES -->
+
+    <section id="clases">
+      <h2>Mis clases</h2>
+
+      <p>
+        Descubrí mis propuestas de formación musical.
+        Clases de Canto, Piano y Teoría Musical para
+        aprender, desarrollar tus habilidades y disfrutar
+        de la música.
+      </p>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+
+    <section id="contacto">
+      <h2>¡Hablemos!</h2>
+
+      <p>
+        ¿Te gustaría comenzar clases o tenés alguna consulta?
+        Estoy acá para ayudarte.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Can Quiroga | Canto · Piano · Teoría Musical
+  </footer>
+
+</body>
+</html>
+
