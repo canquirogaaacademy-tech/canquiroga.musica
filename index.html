@@ -74,28 +74,27 @@
 
     /* WHATSAPP */
 
-    .whatsapp {
-      position: fixed;
-      bottom: 22px;
-      right: 25px;
-      width: 65px;
-      height: 65px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      font-size: 35px;
-      box-shadow: 0 3px 12px #0006;
-      z-index: 100;
-      transition: transform 0.3s;
-    }
+.whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  display: block;
+  z-index: 100;
+  transition: transform 0.3s;
+}
 
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
+.whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
 
     /* SECCIONES */
 
@@ -215,13 +214,15 @@
 
   <!-- WHATSAPP -->
 
-  <a class="whatsapp"
-     href="https://wa.me/5491165730810"
-     target="_blank"
-     rel="noopener"
-     aria-label="Contactar por WhatsApp">
-    📞
-  </a>
+<a class="whatsapp"
+   href="https://wa.me/5491165730810?text=Hola%20Can%20Quiroga!%20Quiero%20saber%20m%C3%A1s%20sobre%20las%20clases!"
+   target="_blank"
+   rel="noopener"
+   aria-label="Contactar por WhatsApp">
+
+  <img src="whatsapp.png" alt="WhatsApp">
+
+</a>
 
   <footer>
     © 2026 Can Quiroga | Canto · Piano · Teoría Musical
