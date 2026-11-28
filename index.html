@@ -161,6 +161,116 @@
       }
     }
 
+/* SECCION MIS CLASES */
+
+.seccion-clases {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1650 / 900;
+    min-height: 650px;
+    background-image: url("misclases-fondo.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* TARJETAS */
+
+.tarjetas-clases {
+    position: absolute;
+    top: 16%;
+    left: 10%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+}
+
+.tarjeta-clase {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-clase img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.tarjeta-clase:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 10px 25px rgba(235, 120, 200, 0.35);
+}
+
+.tarjeta-clase:active {
+    transform: scale(0.96);
+}
+
+/* BOTON QUIERO EMPEZAR */
+
+.boton-empezar {
+    position: absolute;
+    right: 8%;
+    bottom: 5%;
+    background: #ad218c;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.boton-empezar:hover {
+    background: #cf36a9;
+    transform: scale(1.07);
+}
+
+.boton-empezar:active {
+    transform: scale(0.95);
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 700px) {
+
+    .seccion-clases {
+        aspect-ratio: auto;
+        min-height: 950px;
+        background-size: auto 100%;
+    }
+
+    .tarjetas-clases {
+        top: 13%;
+        left: 10%;
+        width: 80%;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tarjeta-clase {
+        max-width: 220px;
+        margin: auto;
+    }
+
+    .boton-empezar {
+        right: 50%;
+        bottom: 4%;
+        transform: translateX(50%);
+        white-space: nowrap;
+    }
+
+    .boton-empezar:hover {
+        transform: translateX(50%) scale(1.05);
+    }
+
+}
   </style>
 </head>
 
